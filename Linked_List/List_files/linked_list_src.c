@@ -121,13 +121,13 @@ void 					PrintListDetails(struct List Inp){
 struct List 			WriteValue(void *data,struct List Inp){
 	switch (Inp.typ){
 	case INT:
-		Inp.lst->data->i = (int)*data;
+		Inp.lst->data->i = *(int*)data;
 		break;
 	case FLOAT:
-		Inp.lst->data->f = (float)*data;
+		Inp.lst->data->f = *(float*)data;
 		break;
 	case CHAR:
-		Inp.lst->data->c = (char)*data;
+		Inp.lst->data->c = *(char*)data;
 		break;
 	}
 	return Inp;
