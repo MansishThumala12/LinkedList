@@ -8,7 +8,7 @@
 #ifndef LINKED_LIST_MCR_H_
 #define LINKED_LIST_MCR_H_
 
- //	TODO:Wriet Macro description
+ //	TODO:Write Macro description
 /*
  *Macro			:
  *
@@ -18,7 +18,7 @@
  */
 #define DEFAULT_ERROR_FLG (char)0b00000000
 
- //	TODO:Wriet Macro description
+ //	TODO:Write Macro description
 /*
  *Macro			:
  *
