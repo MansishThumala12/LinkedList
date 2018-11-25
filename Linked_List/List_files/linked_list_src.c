@@ -115,7 +115,7 @@ struct List 			WriteData(void *data,struct List Inp){
 
 void 					PrintListDetails(struct List Inp){
 //	TODO:Still have to complete this function
-	printf("%d\n",ReturnLenght(Inp));
+	printf("lenght od the list: %d\n",ReturnLenght(Inp));
 }
 
 struct List 			WriteValue(void *data,struct List Inp){
