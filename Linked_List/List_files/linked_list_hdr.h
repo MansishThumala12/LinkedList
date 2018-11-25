@@ -109,4 +109,14 @@ struct List Align(struct List Inp);
  *Return		:
  */
 void PrintListDetails(struct List Inp);
+
+//	TODO:Wriet function description
+/*
+ *Function		:
+ *
+ *Parameter		:
+ *
+ *Return		:
+ */
+struct List WriteData(void *data,struct List Inp);
 #endif /* LINKED_LIST_HDR_H_ */

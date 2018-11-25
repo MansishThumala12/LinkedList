@@ -37,8 +37,8 @@
 #define ReturnBack(Lst) (Lst.back)
 
 //	TODO: Deal with Macro's
-#define GotoFront(Inp) (Inp.lst = Inp.front)
+#define GotoFront(Inp) (Inp->lst = Inp->front)
 
-#define GotoBack(Inp) (Inp.lst = Inp.back)
+#define GotoBack(Inp) (Inp->lst = Inp->back)
 
 #endif /* LINKED_LIST_MCR_H_ */

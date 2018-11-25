@@ -109,7 +109,29 @@ struct List 			Align(struct List Inp){
 
 struct List 			WriteData(void *data,struct List Inp){
 
-//	TODO:Complete Function
+//	TODO:Have remove the next link's and have to write an another functions to for simple writes with out links
+	rtn_struct temp;
+	temp=LinkNew(&Inp);
+	if (temp.error != NOT_CREATED|PARTIAL_CREATED){
+		switch (temp.Return_Pointer->typ){
+						case INT:
+							temp.Return_Pointer->lst->data = *(int*) data;
+							if (temp.Return_Pointer->lst->next != NULL){temp.Return_Pointer->lst = temp.Return_Pointer->lst->next;
+																		temp.Return_Pointer->curr_pos++;}
+							break;
+						case FLOAT:
+							temp.Return_Pointer->lst->data = *(float*) data;
+							if (temp.Return_Pointer->lst->next != NULL){temp.Return_Pointer->lst = temp.Return_Pointer->lst->next;
+																		temp.Return_Pointer->curr_pos++;}
+							break;
+						case CHAR:
+							temp.Return_Pointer->lst->data = *(char*) data;
+							if (temp.Return_Pointer->lst->next != NULL){temp.Return_Pointer->lst = temp.Return_Pointer->lst->next;
+																		temp.Return_Pointer->curr_pos++;}
+							break;
+		}
+	}
+
 	return Inp;
 }
 
@@ -131,4 +153,25 @@ struct List 			WriteValue(void *data,struct List Inp){
 		break;
 	}
 	return Inp;
+}
+
+void 					PrintList(struct List *Inp){
+	Inp->lst = Inp->front;
+	for(int i=0; i<Inp->lenght; i++){
+		switch (Inp->typ){
+		case INT:
+			printf ("%d, ",Inp->lst->data);
+			Inp->lst = Inp->lst->next;
+			break;
+		case FLOAT:
+			printf ("%f, ",Inp->lst->data);
+			Inp->lst = Inp->lst->next;
+			break;
+		case CHAR:
+			printf ("%c, ",Inp->lst->data);
+			Inp->lst = Inp->lst->next;
+			break;
+		}
+	}
+	Inp->curr_pos = Inp->back;
 }

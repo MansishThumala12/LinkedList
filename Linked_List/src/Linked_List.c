@@ -13,6 +13,8 @@
 
 int main(void) {
 	list_t man;
-	man = CreateList(7,INT);
+	man = CreateList(1,INT);
+	GotoFront(&man);
+
 	return EXIT_SUCCESS;
 }
